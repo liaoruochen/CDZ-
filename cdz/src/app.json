@@ -1,11 +1,38 @@
 {
   "pages": [
+    "pages/money/main",
+    "pages/gerenzhuang/main",
+    "pages/realName/main",
+    "pages/password/main",
+    "pages/userInfo/main",
+    "pages/me/main",
     "pages/index/main",
-    "pages/logs/main"  ],
+    "pages/charge/main",
+    "pages/logs/main",
+    "pages/resgister/main"
+  ],
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "WeChat",
     "navigationBarTextStyle": "black"
-  }
+  },
+  "tabBar": {  
+    "color": "#000000",  
+    "selectedColor": "#1296db",  
+    "borderStyle": "black" ,
+    "list": [
+      {  
+      "selectedIconPath": "/static/img/ic_charge_selected.png",
+      "iconPath": "/static/img/ic_charge.png",  
+      "pagePath": "pages/charge/main",  
+      "text": "充电"  
+      }, {  
+      "selectedIconPath": "/static/img/ic_my_selected.png",  
+      "iconPath": "/static/img/ic_my.png",  
+      "pagePath": "pages/me/main",  
+      "text": "我的"  
+      }
+    ]  
+} 
 }

@@ -1,8 +1,10 @@
 <template>
-  <div class="container">
-    <p>温馨提示</p>
-    <p>请允许微信授权以使用更多功能</p>
-    <button @click="getUserInfo">确定</button>
+  <div class="comtainer">
+    <div class="box">
+      <p class="remind">温馨提示</p>
+      <p class="please">请允许微信授权以使用更多功能</p>
+      <button open-type='getUserInfo' class="weui-btn weui-btn_plain-primary btn">确定</button>
+    </div>
   </div>
 </template>
 
@@ -19,25 +21,42 @@ export default {
   },
 
   methods: {
-    getUserInfo () {
-      // 调用登录接口
-      wx.login({
-        success: () => {
-          wx.getUserInfo({
-            success: (res) => {
-              this.userInfo = res.userInfo
-            }
-          })
-        }
-      })
-      console.log('22')
-    }
   }
 }
 </script>
 
-<style scoped>
-  .container {
-    
+<style lang="less" scoped>
+.comtainer {
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #808080;
+  .box {
+    width: 600rpx;
+    height: 300rpx;
+    margin: 0 auto;
+    margin-top: 50%;
+    border-radius: 20rpx;
+    background-color: #fff;
+    position: relative;
+
+    .remind {
+      text-align: center;
+      font-size: 42rpx;
+      padding-top: 20rpx;
+    }
+    .please {
+      text-align: center;
+      font-size: 28rpx;
+      margin-top: 20rpx;
+      color: #888888
+    }
+    .btn {
+      position: absolute;
+      bottom: 20rpx;
+      width: 500rpx;
+      margin-left: 50rpx;
+    }
   }
+}
 </style>
