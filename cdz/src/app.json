@@ -1,5 +1,8 @@
 {
   "pages": [
+    "pages/about/main",
+    "pages/opinion/main",
+    "pages/record/main",
     "pages/consumption/main",
     "pages/detail/main",
     "pages/recharge/main",
