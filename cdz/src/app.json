@@ -1,7 +1,16 @@
 {
   "pages": [
+<<<<<<< HEAD
     "pages/charge/main",
     "pages/index/main",
+=======
+    "pages/about/main",
+    "pages/opinion/main",
+    "pages/record/main",
+    "pages/consumption/main",
+    "pages/detail/main",
+    "pages/recharge/main",
+>>>>>>> 6f89a4e422bca1cb3749503f1d92b2dc06cd7c21
     "pages/money/main",
     "pages/gerenzhuang/main",
     "pages/realName/main",
