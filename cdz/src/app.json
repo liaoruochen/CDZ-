@@ -1,13 +1,13 @@
 {
   "pages": [
+    "pages/charge/main",
+    "pages/index/main",
     "pages/money/main",
     "pages/gerenzhuang/main",
     "pages/realName/main",
     "pages/password/main",
     "pages/userInfo/main",
     "pages/me/main",
-    "pages/index/main",
-    "pages/charge/main",
     "pages/logs/main",
     "pages/resgister/main"
   ],
