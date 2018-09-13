@@ -1,13 +1,14 @@
 <template>
   <div>
-    <div class="weui-cells">
+    <Index v-if="!isUserInfo"></Index>
+    <div v-if="isUserInfo" class="weui-cells">
       <div class="header">
         <div class="head">
           <img :src="avatarUrl" alt="">
         </div>
         <p class="name">{{nickName}}</p>
       </div>
-      <a class="weui-cell weui-cell_access" href="javascript:;">
+      <a class="weui-cell weui-cell_access" href="../userInfo/main">
         <div class="weui-cell__bd">
           <img class="miniHead" src="../../../static/img/user.png" alt="">
           <p>个人信息</p>
@@ -15,7 +16,7 @@
         <div class="weui-cell__ft">
         </div>
       </a>
-      <a class="weui-cell weui-cell_access" href="javascript:;">
+      <a class="weui-cell weui-cell_access" href="../money/main">
         <div class="weui-cell__bd">
           <img class="miniHead" src="../../../static/img/purse.png" alt="">
           <p>我的钱包</p>
@@ -23,7 +24,7 @@
         <div class="weui-cell__ft">
         </div>
       </a>
-      <a class="weui-cell weui-cell_access" href="javascript:;">
+      <a class="weui-cell weui-cell_access" href="../gerenzhuang/main">
         <div class="weui-cell__bd">
           <img class="miniHead" src="../../../static/img/module.png" alt="">
           <p>个人桩信息</p>
@@ -31,7 +32,7 @@
         <div class="weui-cell__ft">
         </div>
       </a>
-      <a class="weui-cell weui-cell_access" href="javascript:;">
+      <a class="weui-cell weui-cell_access" href="../opinion/main">
         <div class="weui-cell__bd">
           <img class="miniHead" src="../../../static/img/opinion.png" alt="">          
           <p>意见反馈</p>
@@ -39,7 +40,7 @@
         <div class="weui-cell__ft">
         </div>
       </a>
-      <a class="weui-cell weui-cell_access" href="javascript:;">
+      <a class="weui-cell weui-cell_access" href="../about/main">
         <div class="weui-cell__bd">
           <img class="miniHead" src="../../../static/img/about.png" alt="">          
           <p>关于我们</p>
@@ -52,18 +53,33 @@
 </template>
 
 <script>
+import Index from '@/pages/index'
 export default {
   data () {
     return {
       nickName: '',
-      avatarUrl: ''
+      avatarUrl: '',
+      isUserInfo: false
     }
   },
-  async created () {
+  async mounted () {
     await wx.getUserInfo({
       success: (res) => {
         this.nickName = res.userInfo.nickName
         this.avatarUrl = res.userInfo.avatarUrl
+      }
+    })
+  },
+  components: {
+    Index
+  },
+  onReady () {
+    wx.getStorage({
+      key: 'isGetUserInfo',
+      success: (res) => {
+        if (res.data === 'true') {
+          this.isUserInfo = true
+        }
       }
     })
   }

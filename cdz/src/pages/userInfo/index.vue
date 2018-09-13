@@ -6,7 +6,7 @@
       </div>
       <div class="weui-cell__ft">{{phone}}</div>
     </div>
-    <a class="weui-cell weui-cell_access" href="javascript:;">
+    <a class="weui-cell weui-cell_access" href="../password/main">
       <div class="weui-cell__bd">
           <p>修改密码</p>
       </div>
@@ -19,7 +19,7 @@
       </div>
       <div class="weui-cell__ft">已认证</div>
     </div>
-    <a class="weui-cell weui-cell_access" v-else href="javascript:;">
+    <a class="weui-cell weui-cell_access" v-else href="../realName/main">
       <div class="weui-cell__bd">
           <p>实名认证</p>
       </div>

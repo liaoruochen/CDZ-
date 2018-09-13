@@ -1,24 +1,21 @@
 {
   "pages": [
-<<<<<<< HEAD
-    "pages/charge/main",
-    "pages/index/main",
-=======
+    "pages/me/main",
+    "pages/resgister/main",
     "pages/about/main",
+    "pages/charge/main",
     "pages/opinion/main",
     "pages/record/main",
     "pages/consumption/main",
     "pages/detail/main",
     "pages/recharge/main",
->>>>>>> 6f89a4e422bca1cb3749503f1d92b2dc06cd7c21
     "pages/money/main",
     "pages/gerenzhuang/main",
     "pages/realName/main",
     "pages/password/main",
     "pages/userInfo/main",
-    "pages/me/main",
     "pages/logs/main",
-    "pages/resgister/main"
+    "pages/index/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
