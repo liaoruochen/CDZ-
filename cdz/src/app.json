@@ -9,13 +9,13 @@
     "pages/consumption/main",
     "pages/detail/main",
     "pages/recharge/main",
+    "pages/index/main",
     "pages/money/main",
     "pages/gerenzhuang/main",
     "pages/realName/main",
     "pages/password/main",
     "pages/userInfo/main",
-    "pages/logs/main",
-    "pages/index/main"
+    "pages/logs/main"
   ],
   "window": {
     "backgroundTextStyle": "light",

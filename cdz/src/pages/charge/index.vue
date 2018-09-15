@@ -9,10 +9,19 @@
     <div class="charge__pic" @click="scavenging">
       <img src="../../../static/img/scavenging.png" style="width:200rpx;height:200rpx" alt="扫码">
     </div>
-    <div></div>
+    <div class="charge__operation">
+      <div class="operation">
+        <img src="../../../static/img/my__charge__info.png" style="width:50rpx;height:50rpx" alt=""/>
+      </div>
+      <div class="operation">
+        <img src="../../../static/img/recently__used.png" style="width:50rpx;height:50rpx"  alt=""/>
+      </div>
+      <div class="operation">
+        <img src="../../../static/img/input.png" style="width:50rpx;height:50rpx"  alt=""/>
+      </div>
+    </div>
   </div>
 </template>
-
 <script>
 import Index from '@/pages/index'
 export default {
@@ -88,6 +97,20 @@ export default {
   @keyframes hovertreemove {
     from {top:50%;}
     to {top:55%;}
+  }
+  .charge__operation {
+    position: absolute;
+    bottom: 80rpx;
+    left: 56rpx;
+    .operation {
+      width: 100rpx;
+      height: 100rpx;
+      border-radius: 50%;
+      border: 1px solid #ccc;
+      margin-bottom: 34rpx;
+      text-align: center;
+      line-height: 100rpx;
+    }
   }
 }
 </style>

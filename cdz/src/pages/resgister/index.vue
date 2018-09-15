@@ -35,6 +35,7 @@ export default {
   },
   methods: {
     login () {
+<<<<<<< HEAD
       if (!this.phoneNumber) {
         wx.showToast({
           title: '请输入手机号',
@@ -90,6 +91,11 @@ export default {
           })
         }
       }
+=======
+      wx.switchTab ({
+        url: '../me/main'
+      })
+>>>>>>> 5f3e4ee0a611eea14d847c8942bc9b11af1f4391
     }
   }
 }
