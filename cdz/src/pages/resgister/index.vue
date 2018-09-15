@@ -20,7 +20,7 @@
 export default {
   methods: {
     login () {
-      wx.switchTab({
+      wx.switchTab ({
         url: '../me/main'
       })
     }

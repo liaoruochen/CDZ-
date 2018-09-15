@@ -19,8 +19,11 @@ export default {
           success: function (res) {
           }
         })
-        wx.redirectTo({
-          url: '../resgister/main'
+        wx.switchTab({
+          url: '../charge/main',
+          success: function (res) {
+            // success
+          }
         })
       }
     }
