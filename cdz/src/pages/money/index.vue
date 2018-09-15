@@ -7,14 +7,14 @@
         <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">充值</a>
       </div>
     </div>
-    <a class="weui-cell weui-cell_access" href="javascript:;">
+    <a class="weui-cell weui-cell_access" href="../detail/main">
       <div class="weui-cell__bd">
           <p>消费明细</p>
       </div>
       <div class="weui-cell__ft">
       </div>
     </a>
-    <a class="weui-cell weui-cell_access" href="javascript:;">
+    <a class="weui-cell weui-cell_access" href="../record/main">
       <div class="weui-cell__bd">
           <p>充值记录</p>
       </div>

@@ -12,13 +12,19 @@
             <input class="weui-input" placeholder="请输入密码（6位）">
         </div>
     </div>
-    <button class="weui-btn weui-btn_primary">注册</button>
+    <button @click="login" class="weui-btn weui-btn_primary">注册</button>
   </div>
 </template>
 
 <script>
 export default {
-
+  methods: {
+    login () {
+      wx.switchTab({
+        url: '../me/main'
+      })
+    }
+  }
 }
 </script>
 

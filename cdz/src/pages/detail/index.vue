@@ -1,6 +1,6 @@
 <template>
 <div class="weui-cells">
-  <a class="weui-cell weui-cell_access" href="javascript:;">
+  <a class="weui-cell weui-cell_access" href="../consumption/main">
     <div class="weui-cell__bd">
         <p>2011年12月31日14:00</p>
     </div>

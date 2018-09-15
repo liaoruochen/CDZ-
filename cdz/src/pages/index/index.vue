@@ -1,44 +1,27 @@
 <template>
-  <div class="comtainer" v-show="userInfo">
+  <div class="container">
     <div class="box">
       <p class="remind">温馨提示</p>
       <p class="please">请允许微信授权以使用更多功能</p>
-      <button open-type='getUserInfo' class="weui-btn weui-btn_plain-primary btn" @bindgetuserinfo="bindGetUserInfo">确定</button>
+      <button open-type='getUserInfo' class="weui-btn weui-btn_plain-primary btn" @getuserinfo="bindgetuserinfo">确定</button>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  data () {
-    return {
-      userInfo: true,
-      canIUse: wx.canIUse('button.open-type.getUserInfo')
-    }
-  },
-  onLoad: function () {
-    console.log(1)
-    wx.getSetting({
-      success: (res) => {
-        if (res.authSetting['scope.record']) {
-          this.userInfo = false
-          wx.switchTab({
-            url: 'main'
-          })
-        }
-      }
-    })
-  },
-  components: {},
   methods: {
-    bindGetUserInfo: function (e) {
-      console.log(e)
-      if (e.detail.userInfo) {
-        // 用户按了允许授权按钮
-        console.log('yunxu')
-      } else {
-        // 用户按了拒绝按钮
-        console.log('quxiao')
+    bindgetuserinfo (e) {
+      if (e.target.userInfo) {
+        wx.setStorage({
+          key: 'isGetUserInfo',
+          data: 'true',
+          success: function (res) {
+          }
+        })
+        wx.redirectTo({
+          url: '../resgister/main'
+        })
       }
     }
   }
@@ -46,7 +29,7 @@ export default {
 </script>
 
 <style lang="less" scoped>
-.comtainer {
+.container {
   width: 100%;
   height: 100vh;
   overflow: hidden;

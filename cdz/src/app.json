@@ -7,9 +7,12 @@
     "pages/realName/main",
     "pages/password/main",
     "pages/userInfo/main",
-    "pages/me/main",
     "pages/logs/main",
-    "pages/resgister/main"
+    "pages/me/main",
+    "pages/about/main",
+    "pages/consumption/main",
+    "pages/resgister/main",
+    "pages/opinion/main"
   ],
   "window": {
     "backgroundTextStyle": "light",
