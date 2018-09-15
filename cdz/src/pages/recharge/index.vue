@@ -4,11 +4,11 @@
       <div class="weui-cell">
         <div class="weui-cell__hd"><label class="weui-label">金额（元）</label></div>
         <div class="weui-cell__bd">
-            <input class="weui-input" type="number" placeholder="请输入充值金额">
+            <input v-model="rechargeMoney" class="weui-input" type="number" placeholder="请输入充值金额">
         </div>
       </div>
     </div>
-    <button :disabled="isAgree" class="weui-btn weui-btn_primary">充值</button>
+    <button :disabled="isAgree" class="weui-btn weui-btn_primary" @click="recharge">充值</button>
     <div class="footer">
       <input type="checkbox" v-model="ischeck" :checked = true @click="check" />
       <p>点击立即充值，即表示您已阅读并同意<span class="xieyi">《充值协议》</span></p>
@@ -21,7 +21,8 @@ export default {
   data () {
     return {
       isAgree: false,
-      ischeck: ''
+      ischeck: '',
+      rechargeMoney: null
     }
   },
   methods: {
@@ -31,6 +32,8 @@ export default {
       } else {
         this.isAgree = true
       }
+    },
+    recharge () {
     }
   }
 }

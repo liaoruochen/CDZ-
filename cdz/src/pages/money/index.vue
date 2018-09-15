@@ -4,7 +4,7 @@
       <p class="yuer">账户余额</p>
       <p class="money">500.00元</p>
       <div class="recharge">
-        <a href="javascript:;" class="weui-btn weui-btn_mini weui-btn_primary">充值</a>
+        <a href="../recharge/main" class="weui-btn weui-btn_mini weui-btn_primary">充值</a>
       </div>
     </div>
     <a class="weui-cell weui-cell_access" href="../detail/main">
