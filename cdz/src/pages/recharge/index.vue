@@ -8,7 +8,7 @@
         </div>
       </div>
     </div>
-    <button :disabled="isAgree" class="weui-btn weui-btn_primary" @click="recharge">充值</button>
+    <button :disabled="isAgree" class="weui-btn weui-btn_primary" @click="charge">充值</button>
     <div class="footer">
       <input type="checkbox" v-model="ischeck" :checked = true @click="check" />
       <p>点击立即充值，即表示您已阅读并同意<span class="xieyi">《充值协议》</span></p>
@@ -17,6 +17,7 @@
 </template>
 
 <script>
+import { recharge } from '@/api/recharge.js'
 export default {
   data () {
     return {
@@ -33,7 +34,8 @@ export default {
         this.isAgree = true
       }
     },
-    recharge () {
+    charge () {
+      recharge()
     }
   }
 }

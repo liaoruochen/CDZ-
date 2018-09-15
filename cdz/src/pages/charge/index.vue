@@ -1,5 +1,6 @@
 <template>
   <div class="charge">
+    <Index v-if="isUserInfo" @issq="issq"></Index>
     <div class="charge__title">扫描充电桩上的二维码开启充电</div>
     <div class="charge_desc" @click="resgister">
       <img src="../../../static/img/about1.png" style="width:30rpx;height:30rpx;" alt="提示">
@@ -13,7 +14,26 @@
 </template>
 
 <script>
+import Index from '@/pages/index'
 export default {
+  data () {
+    return {
+      isUserInfo: true
+    }
+  },
+  created () {
+    wx.getStorage({
+      key: 'isGetUserInfo',
+      success: (res) => {
+        if (res.data === 'true') {
+          this.isUserInfo = false
+        }
+      }
+    })
+  },
+  components: {
+    Index
+  },
   methods: {
     scavenging () {
       wx.scanCode({
@@ -29,6 +49,9 @@ export default {
           // success
         }
       })
+    },
+    issq () {
+      this.isUserInfo = false
     }
   }
 }

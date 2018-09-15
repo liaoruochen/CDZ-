@@ -1,9 +1,9 @@
 {
   "pages": [
+    "pages/charge/main",
     "pages/me/main",
     "pages/resgister/main",
     "pages/about/main",
-    "pages/charge/main",
     "pages/opinion/main",
     "pages/record/main",
     "pages/consumption/main",

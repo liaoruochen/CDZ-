@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Index v-if="!isUserInfo"></Index>
-    <div v-if="isUserInfo" class="weui-cells">
+    <div class="weui-cells">
       <div class="header">
         <div class="head">
           <img :src="avatarUrl" alt="">
@@ -53,13 +52,11 @@
 </template>
 
 <script>
-import Index from '@/pages/index'
 export default {
   data () {
     return {
       nickName: '',
-      avatarUrl: '',
-      isUserInfo: false
+      avatarUrl: ''
     }
   },
   async mounted () {
@@ -67,19 +64,6 @@ export default {
       success: (res) => {
         this.nickName = res.userInfo.nickName
         this.avatarUrl = res.userInfo.avatarUrl
-      }
-    })
-  },
-  components: {
-    Index
-  },
-  onReady () {
-    wx.getStorage({
-      key: 'isGetUserInfo',
-      success: (res) => {
-        if (res.data === 'true') {
-          this.isUserInfo = true
-        }
       }
     })
   }

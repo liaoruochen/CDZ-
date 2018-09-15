@@ -19,9 +19,7 @@ export default {
           success: function (res) {
           }
         })
-        wx.redirectTo({
-          url: '../resgister/main'
-        })
+        this.$emit('issq', false)
       }
     }
   }
@@ -30,10 +28,16 @@ export default {
 
 <style lang="less" scoped>
 .container {
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100vh;
   overflow: hidden;
-  background-color: #808080;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: opacity .3s;
+  z-index: 999;
+
   .box {
     width: 600rpx;
     height: 300rpx;
@@ -42,6 +46,7 @@ export default {
     border-radius: 20rpx;
     background-color: #fff;
     position: relative;
+
 
     .remind {
       text-align: center;
